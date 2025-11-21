@@ -15,6 +15,16 @@ class TestCalculator(unittest.TestCase):
         """Test that method handles non-integer values correctly"""
         result = self.calc.add("1 two 3")
         self.assertEqual(result, "Please enter valid integers with spaces in between")
+    
+    def test_division_valid(self):
+        """Test normal division"""
+        result = self.calc.divide(10, 2)
+        self.assertEqual(result, 5)
+
+    def test_division_by_zero(self):
+        """Test divide-by-zero error message"""
+        result = self.calc.divide(10, 0)
+        self.assertEqual(result, "Denominator cannot be 0")
 
 
 if __name__ == "__main__":
