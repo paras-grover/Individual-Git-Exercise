@@ -8,7 +8,14 @@ class Calculator:
             return sum
         except ValueError:
             return "Please enter valid integers with spaces in between"
-        
+    
+    def divide(self,num,den):
+        '''Divide method to perform division of two numbers'''
+        if den == 0:
+            return "Denominator cannot be 0"
+        else:
+            return num/den
+
 if __name__=="__main__":
     # initializing calculator object
     calc=Calculator()
@@ -18,7 +25,7 @@ if __name__=="__main__":
         
         print()
         print("Select the option:")
-        print("1. Addition")
+        print("1. Addition\n2. Division\n3.Exit")
         opt=input()
         print()
 
@@ -28,5 +35,20 @@ if __name__=="__main__":
             number_string=input()
             print("Sum = ",calc.add(number_string))
             print("------------------------------------------------------------")
+        elif opt == "2":
+            print("------------------------------------------------------------")
+            try:
+                num=int(input("Enter the numerator: "))
+                den=int(input("Enter the denominator: "))
+                print(f'{num}/{den} = ',calc.divide(num,den))
+            except ValueError:
+                print("Please enter an integer")
+            print("------------------------------------------------------------")
+        elif opt == "3":
+            print("--------------------------------------------------------------")
+            break
         else:
             print("Please select a valid option.")
+
+        
+
