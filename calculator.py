@@ -20,7 +20,7 @@ if __name__=="__main__":
     # initializing calculator object
     calc=Calculator()
 
-    #Infinite loop to get input from user until specified otherwise
+    #Infinite loop to get input from user until specified otherwise to get desired result 
     while True:
         
         print()
