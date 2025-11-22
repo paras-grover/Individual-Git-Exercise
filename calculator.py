@@ -18,7 +18,7 @@ class Calculator:
             return num/den
 
 if __name__=="__main__":
-    # initializing calculator object
+    # initializing calculator object  in the code
     calc=Calculator()
 
     #Infinite loop to get input from user until specified otherwise to get desired result 
